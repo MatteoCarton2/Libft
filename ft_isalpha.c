@@ -6,11 +6,9 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:33:26 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/07 17:18:16 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/07 17:27:28 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isalpha(int c)
 {
