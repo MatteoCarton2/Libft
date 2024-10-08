@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 07:26:20 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/08 07:26:20 by mcarton          ###   ########.fr       */
+/*   Created: 2024/10/08 08:13:27 by mcarton           #+#    #+#             */
+/*   Updated: 2024/10/08 08:13:27 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void    ft_memset(char *tableau, int value, size_t size)
+void ft_bzero(char *tableau, size_t size)
 {
-        int i;
+    int i;
 
-        i = 0;
-        while (i < size)
-        {
-                tableau[i] = value;
-                i++;
-        }
+    i = 0;
+    while(i < size)
+    {
+        tableau[i] = 0;
+        i++;
+    }
 }
