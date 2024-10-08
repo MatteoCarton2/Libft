@@ -10,15 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_memset(char *tableau, int value, size_t size)
+void    ft_memset(char *tableau, int value, size_t size)
 {
-    int i;
+        int i;
 
-    i = 0;
-    while (i < size)
-    {
-        tableau[i] = value;
-        printf("%d\n", tableau[i]);
-        i++;   
-    }
+        i = 0;
+        while (i < size)
+        {
+                tableau[i] = value;
+                i++;
+        }
 }
