@@ -12,14 +12,16 @@
 
 #include <stddef.h>
 
-void ft_bzero(char *tableau, size_t size)
+void ft_bzero(void *tableau, size_t size)
 {
-    int i;
+    size_t i;
+    unsigned char *tmp;
 
     i = 0;
+    tmp = (unsigned char *) tableau;
     while(i < size)
     {
-        tableau[i] = 0;
+        tmp[i] = 0;
         i++;
     }
 }

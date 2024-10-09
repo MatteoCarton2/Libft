@@ -12,14 +12,21 @@
 
 #include <stddef.h>
 
-int ft_memcpy(char *dest, char *src, size_t size)
+void * ft_memcpy(void *dest, const void *src, size_t size)
 {
-    int i;
+    size_t i;
+    unsigned char *dest_tmp;
+    const unsigned char *src_tmp;
 
     i = 0;
+    dest_tmp = (unsigned char *) dest;
+    src_tmp = (const unsigned char *) src;
+
     while (i < size)
     {
-        dest[i] = src[i];
+        dest_tmp[i] = src_tmp[i];
         i++;
     }
+
+    return(dest);
 }
