@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 01:06:11 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/16 01:22:30 by mcarton          ###   ########.fr       */
+/*   Created: 2024/10/16 01:32:28 by mcarton           #+#    #+#             */
+/*   Updated: 2024/10/16 01:46:44 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (c == '\0')
-		return ((char *)&str[i]);
-	while (str[i] != '\0')
+	while (i < n && s1[i] != '\0' && s2[i] != '\0')
 	{
-		if (str[i] == c)
-			return ((char *)&str[i]);
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
 /*
 int	main(void)
 {
-	char	str[] = "Salut";
-	int		c;
+	char	s1[] = "ZiAoo";
+	char	s2[] = "ZiBoo";
+	size_t	n;
 
-	c = 'u';
-	printf("%s\n", ft_strchr(str, c));
+	n = 3;
+	printf("%d\n", ft_strncmp(s1, s2, n));
 }
 */

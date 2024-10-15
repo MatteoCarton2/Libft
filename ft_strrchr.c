@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 01:06:11 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/16 01:22:30 by mcarton          ###   ########.fr       */
+/*   Created: 2024/10/16 01:23:31 by mcarton           #+#    #+#             */
+/*   Updated: 2024/10/16 01:30:56 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
 
@@ -20,20 +20,22 @@ char	*ft_strchr(const char *str, int c)
 	if (c == '\0')
 		return ((char *)&str[i]);
 	while (str[i] != '\0')
+		i++;
+	while (i >= 0)
 	{
 		if (str[i] == c)
 			return ((char *)&str[i]);
-		i++;
+		i--;
 	}
 	return (NULL);
 }
 /*
 int	main(void)
 {
-	char	str[] = "Salut";
+	char	str[] = "Epuisett";
 	int		c;
 
-	c = 'u';
-	printf("%s\n", ft_strchr(str, c));
+	c = 'e';
+	printf("%s\n", ft_strrchr(str, c));
 }
 */
