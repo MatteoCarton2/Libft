@@ -6,10 +6,11 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 01:05:10 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/16 01:05:13 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/16 04:18:10 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
