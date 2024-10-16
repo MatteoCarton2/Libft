@@ -6,11 +6,13 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:15:41 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/07 17:28:05 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/16 13:24:47 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 
