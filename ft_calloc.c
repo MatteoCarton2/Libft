@@ -6,11 +6,12 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 04:17:19 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/16 04:35:11 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/16 16:33:27 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -18,6 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*tableau;
 
 	i = 0;
+	if (size != 0 && count > (SIZE_MAX / size))
+		return (NULL);
 	tableau = malloc(count * size);
 	if (!tableau)
 		return (NULL);

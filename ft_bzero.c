@@ -6,11 +6,11 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 08:13:27 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/16 01:01:33 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/16 15:03:28 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *tableau, size_t size)
 {

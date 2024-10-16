@@ -6,11 +6,11 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 08:54:36 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/16 00:56:36 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/16 15:04:03 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(char *dest, char *src, size_t size)
 {

@@ -6,13 +6,11 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 08:22:47 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/16 00:56:34 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/16 15:05:29 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t size)
 {
@@ -29,8 +27,4 @@ void	*ft_memcpy(void *dest, const void *src, size_t size)
 		i++;
 	}
 	return (dest);
-}
-
-int	main(void)
-{
 }
