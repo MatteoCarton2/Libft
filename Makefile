@@ -6,7 +6,7 @@
 #    By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/16 13:13:54 by mcarton           #+#    #+#              #
-#    Updated: 2024/10/16 16:44:02 by mcarton          ###   ########.fr        #
+#    Updated: 2024/10/17 02:38:50 by mcarton          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ SRC = ft_isalpha.c \
 	ft_strjoin.c \
 	ft_strtrim.c \
 	ft_split.c \
+	ft_itoa.c \
 
 CC = gcc
 
