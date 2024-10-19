@@ -6,7 +6,7 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:44:48 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/16 14:52:11 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/19 16:38:33 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 	int		i;
 
+	if (!s1 || !set)
+		return (NULL);
 	debut = 0;
 	fin = ft_strlen(s1);
 	i = 0;
-	if (!s1 || !set)
-		return (NULL);
 	while (s1[debut] && s1_est_dans_set(set, s1[debut]))
 		debut++;
 	while (fin > debut && s1_est_dans_set(set, s1[fin - 1]))

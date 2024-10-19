@@ -1,36 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 16:43:13 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/19 16:35:28 by mcarton          ###   ########.fr       */
+/*   Created: 2024/10/19 13:22:00 by mcarton           #+#    #+#             */
+/*   Updated: 2024/10/19 13:52:43 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+int	ft_lstsize(t_list *lst)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	if (!s || fd < 0)
-		return ;
-	while (s[i] != '\0')
+	while (lst != NULL)
 	{
-		write(fd, &s[i], 1);
+		lst = lst->next;
 		i++;
 	}
-	write(fd, "\n", 1);
+	return (i);
 }
 /*
 int	main(void)
 {
-	char	s[] = "Salut ça va ?";
+	t_list	*maillon1 = ft_lstnew("numero 1");
+	t_list	*maillon2 = ft_lstnew("numero 2");
+	t_list	*maillon3 = ft_lstnew("numero 3");
+	t_list	*liste = maillon1;
 
-	ft_putendl_fd(s, 0);
+	maillon1->next = maillon2;
+	maillon2->next = maillon3;
+    
+	printf("Nombre de maillons = %d\n", ft_lstsize(liste));
+    
+	free(maillon1);
+	free(maillon2);
+	free(maillon3);
+	return (0);
 }
 */

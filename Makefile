@@ -6,7 +6,7 @@
 #    By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/16 13:13:54 by mcarton           #+#    #+#              #
-#    Updated: 2024/10/18 16:50:29 by mcarton          ###   ########.fr        #
+#    Updated: 2024/10/19 16:50:07 by mcarton          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,20 +47,35 @@ SRC = ft_isalpha.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 
+SRC_BONUS = ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c \
+
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
 OBJ = $(SRC:.c=.o)
 
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
+
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 		ar rcs $(NAME) $(OBJ)
 
+bonus : $(OBJ) $(OBJ_BONUS)
+		ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
+
 %.o : %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
-	
+
 clean :
 	rm -f $(OBJ) $(OBJ_BONUS)
 
@@ -68,3 +83,5 @@ fclean : clean
 		rm -f $(NAME)
 
 re : fclean all
+
+.PHONY : all bonus clean fclean re

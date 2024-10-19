@@ -6,7 +6,7 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:10:02 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/18 16:35:26 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/19 16:35:54 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
+	if (fd < 0)
+		return ;
 	write(fd, &c, 1);
 }
 /*

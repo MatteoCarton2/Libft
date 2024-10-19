@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 08:22:47 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/19 16:42:13 by mcarton          ###   ########.fr       */
+/*   Created: 2024/10/19 15:26:03 by mcarton           #+#    #+#             */
+/*   Updated: 2024/10/19 15:40:58 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t				i;
-	unsigned char		*dest_tmp;
-	const unsigned char	*src_tmp;
+	t_list	*nouvelle_liste;
+	t_list	*nouveau_maillon;
 
-	if (!dest && !src)
+	if (!lst || !f || !del)
 		return (NULL);
-	i = 0;
-	dest_tmp = (unsigned char *)dest;
-	src_tmp = (const unsigned char *)src;
-	while (i < n)
+	nouvelle_liste = NULL;
+	while (lst)
 	{
-		dest_tmp[i] = src_tmp[i];
-		i++;
+		nouveau_maillon = ft_lstnew(f(lst->content));
+		if (!nouveau_maillon)
+		{
+			ft_lstclear(&nouvelle_liste, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&nouvelle_liste, nouveau_maillon);
+		lst = lst->next;
 	}
-	return (dest);
+	return (nouvelle_liste);
 }

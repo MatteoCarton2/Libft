@@ -6,7 +6,7 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 00:06:54 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/16 01:02:36 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/19 16:11:38 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	long_src = 0;
 	long_dest = 0;
 	i = 0;
+	if ((dest == NULL && src == NULL) || (dest == NULL && size == 0))
+		return (0);
 	while (src[long_src] != '\0')
 		long_src++;
 	while (dest[long_dest] != '\0')

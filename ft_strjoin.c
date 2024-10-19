@@ -6,7 +6,7 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:26:14 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/16 13:43:37 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/19 16:11:58 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		return (NULL);
 	lengthtotal = ft_strlen(s1) + ft_strlen(s2) + 1;
 	str = malloc(lengthtotal * sizeof(char));
+	if (!str)
+		return (NULL);
 	while (s1[i])
 	{
 		str[i] = s1[i];

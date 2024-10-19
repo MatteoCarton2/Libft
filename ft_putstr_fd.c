@@ -6,7 +6,7 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:36:59 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/18 16:41:37 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/19 16:30:01 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	unsigned int	i;
 
 	i = 0;
+	if (s == NULL || fd < 0)
+		return ;
 	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);

@@ -6,7 +6,7 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 23:35:31 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/16 01:05:31 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/19 16:11:52 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	i = 0;
 	long_src = 0;
 	while (src[long_src] != '\0')
-	{
 		long_src++;
-	}
 	if (size == 0)
 		return (long_src);
 	while (i < size - 1 && src[i] != '\0')
