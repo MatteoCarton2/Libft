@@ -6,7 +6,7 @@
 /*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 16:43:39 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/16 23:43:56 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/19 17:08:05 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ char	**ft_split(char const *s, char c)
 	tableau = ft_calloc(nbr + 1, sizeof(char *));
 	if (!tableau)
 		return (NULL);
-	mots_par_mots(tableau, s, c, nbr);
+	tableau = mots_par_mots(tableau, s, c, nbr);
 	return (tableau);
 }
 /*
