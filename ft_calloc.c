@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mcarton <mcarton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 04:17:19 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/16 16:33:27 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/23 17:47:46 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*tableau;
 
 	i = 0;
-	if (size != 0 && count > (SIZE_MAX / size))
+	if (count != 0 && size != 0 && (count > (2147483647 / size)))
 		return (NULL);
 	tableau = malloc(count * size);
 	if (!tableau)

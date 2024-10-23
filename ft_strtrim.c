@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mcarton <mcarton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:44:48 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/19 16:38:33 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/23 17:23:08 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	s1_est_dans_set(const char *set, char c)
+static int	s1_est_dans_set(const char *set, char c)
 {
 	int	i;
 

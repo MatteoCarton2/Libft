@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mcarton <mcarton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 00:06:54 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/19 16:11:38 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/23 17:36:01 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,13 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 /*
 int	main(void)
 {
-	char dest[] = "Bonjour";
-	char src[] = "Salut";
+	//char dest[] = "Bonjour";
+	//char src[] = "Salut";
 
-	printf("%ld\n", ft_strlcat(dest, src, 7));
+	char *dest2 = NULL;
+	char *src2 = NULL;
+
+	// printf("%ld\n", ft_strlcat(dest, src, 7));
+	printf("%ld\n", ft_strlcat(dest2, src2, 7));
 }
 */

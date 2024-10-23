@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mcarton <mcarton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 23:59:45 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/17 02:39:35 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/23 17:24:24 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	nbr_de_chiffre(int n)
+static int	nbr_de_chiffre(int n)
 {
 	int	nbr;
 

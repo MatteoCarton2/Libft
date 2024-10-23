@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mcarton <mcarton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:35:23 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/19 16:24:22 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/23 17:20:36 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,12 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+/*
+int main(void)
+{
+	char test[] = "Salut";
+	char test2[] = "Salut";
+	printf("%s\n", ft_memset(test, 'o', 6));
+	printf("%s\n", memset(test2, 'o', 6));
+}
+*/

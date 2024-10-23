@@ -3,19 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcarton <mcarton@student.s19.be>           +#+  +:+       +#+        */
+/*   By: mcarton <mcarton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 16:43:39 by mcarton           #+#    #+#             */
-/*   Updated: 2024/10/19 17:08:05 by mcarton          ###   ########.fr       */
+/*   Updated: 2024/10/23 17:55:57 by mcarton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Etape 1 : compter le nombre de mots [[[[]]]]
-// Etape 2 : allouer le tableau de pointeurs **
-
-size_t	nbr_de_mots(char const *s, char c)
+static size_t	nbr_de_mots(char const *s, char c)
 {
 	size_t	nbr;
 	int		i;
@@ -34,7 +31,7 @@ size_t	nbr_de_mots(char const *s, char c)
 	return (nbr);
 }
 
-char	*remplir(char const *s, char *mot, int debut, int fin)
+static char	*remplir(char const *s, char *mot, int debut, int fin)
 {
 	size_t	j;
 
@@ -49,7 +46,7 @@ char	*remplir(char const *s, char *mot, int debut, int fin)
 	return (mot);
 }
 
-void	free_allocation(char **tableau, size_t n)
+static void	free_allocation(char **tableau, size_t n)
 {
 	size_t	i;
 
@@ -62,7 +59,7 @@ void	free_allocation(char **tableau, size_t n)
 	free(tableau);
 }
 
-char	**mots_par_mots(char **tableau, char const *s, char c,
+static char	**mots_par_mots(char **tableau, char const *s, char c,
 		size_t nbr_de_mots)
 {
 	size_t	i;
